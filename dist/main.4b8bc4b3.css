@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+*::before,
+::after {
+  box-sizing: border-box;
+}
+ol,
+li {
+  list-style: none;
+}
+body {
+  overflow: hidden;
+}
+#global {
+  display: flex;
+  flex-wrap: wrap;
+}
+#global > section {
+  border: 2px solid;
+  width: 50vw;
+  height: 50vh;
+}
+#app1 {
+  border: 2px solid;
+  width: 50vw;
+  height: 50vh;
+}
+#app2 .tab-bar {
+  display: flex;
+}
+.tab-bar > li {
+  width: 50%;
+  border: 1px solid blue;
+}
+.tab-bar > li.selected {
+  background-color: antiquewhite;
+}
+
+.tab-content > li {
+  display: none;
+}
+.tab-content > li.active {
+  display: block;
+}
+#app3 .square {
+  border: 1px solid blue;
+  width: 80px;
+  height: 80px;
+  margin-top: 5vh;
+  margin-left: 5vw;
+  transition: transform 1s;
+}
+#app3 .square.active {
+  transform: translateX(10vw);
+}
+#app4 .circle {
+  border-radius: 50%;
+  border: 1px solid red;
+  width: 150px;
+  height: 150px;
+  margin-top: 5vh;
+  margin-left: 5vw;
+  background-color: yellow;
+}
+#app4 .circle.active {
+  animation: change 1s infinite alternate linear;
+}
+@keyframes change {
+  100% {
+    background-color: red;
+  }
+} ;
